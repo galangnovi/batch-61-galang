@@ -1,86 +1,104 @@
 body {
-    margin-top: 100px;
-    font-family: verdana;
-    background-color: rgba(165, 175, 171, 0.534);
-    display: grid;
+   margin-top: 100px;
+   font-family: verdana;
+   background-color: rgba(165, 175, 171, 0.534);
+   display: grid;
+}
+h1{
+   font-weight: bold;
 }
 .container{
-    background-color: rgb(255, 255, 255);
-    padding:10px 30px 10px 30px;
-    width: 900px;
-    border-radius: 10px;
-    display: flex;
-    flex-wrap: wrap;
+   background-color: rgb(255, 255, 255);
+   padding:10px 30px 10px 30px;
+   width: 900px;
+   border-radius: 10px;
+   display: flex;
+   flex-wrap: wrap;
 }
 .container-form{
+  display: flex;
+  justify-content: center;
+}
+.main-1{
+   width: 500px;
+   padding: 50px 30px 10px 15px;
+}
+.main-1 h1{
+   font-size: 35px;
+}
+.paragraph{
+   text-align: justify;
+}
+button {
+   background-color: black;
+   border-radius: 19px;
+   padding: 4px 20px;
+   color: white;
+   font-size: 19px;
+}
+.download{
+   display: inline-block;
+   align-items: center;
+   padding-left: 15px;
+}
+.download-icon{
+   display: inline-block;
+   width: 25px;
+   height: auto;
+}
+.social-icon{
+   display: inline-block;
+   width: 50px;
+   text-align: center;
+}
+.social{
+   display: flex;
+   justify-content: left;
+   gap: 20px;
+}
+.img{
    display: flex;
    justify-content: center;
 }
-.main-1{
-    width: 500px;
-    padding: 30px 30px 10px 15px;
+.rhoma-irama{
+   border-radius: 5px;
+   height: 350px;
+   margin: 0 0 0 0.83px;
 }
-.paragraph{
-    text-align: justify;
+.card1{
+   text-align: center;
+   margin: 15px;
 }
-button {
-    
-    background-color: black;
-    border-radius: 19px;
-    padding: 4px 20px;
-    color: white;
-    font-size: 19px;
+.konten{
+   margin-top: 20px;
+   box-shadow: 1px 1px 5px black;
+   border-radius: 5px;
+   height: 450px;
+   width: 313.6px;
+   margin-left: auto;
+   margin-right: auto;
 }
-.download{
-    display: inline-block;
-    align-items: center;
-    padding-left: 15px;
+form h1{
+   text-align: center;
 }
-.download-icon{
-    display: inline-block;
-    width: 25px;
-    height: auto;
- }
- .social-icon{
-    display: inline-block;
-    width: 50px;
-    text-align: center;
- }
- .social{
-    display: flex;
-    justify-content: left;
-    gap: 20px;
- }
- .img{
-    display: flex;
-    justify-content: center;
- }
- .rhoma-irama{
-    border-radius: 5px;
-    height: 350px;
- }
- .card1{
-    text-align: center;
-    margin: 15px;
- }
- .konten{
-    margin-top: 20px;
-    box-shadow: 1px 1px 1px 1px;
-    border-radius: 5px;
-    height: 450px;
-    width: 312px;
-    margin-left: auto;
-    margin-right: auto;
- }
- form h1{
-    text-align: center;
- }
- .get-in-touch{
-    height: auto;
-    width: 500px;
-    margin-top: -10px;
- }
- .submit-box{
-   display: flex;
-   justify-content: end;
- }
+.get-in-touch{
+   height: auto;
+   width: 500px;
+   margin-top: -10px;
+}
+.get-in-touch h1{
+   padding-bottom: 20px;
+}
+.form-label{
+   margin-bottom: 0;
+   margin-top: 5px;
+   color: black;
+   font-weight: bold;
+}
+.submit-box{
+  display: flex;
+  justify-content: end;
+}
+.submit-box a .nav-link{
+   border-radius: 30px;
+}
