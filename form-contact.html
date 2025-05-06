@@ -8,7 +8,8 @@
     <title>Get In Touch</title>
 </head>
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script> 
     <nav class="navbar navbar-expand-lg bg-body-tertiary" style="position: fixed; top: 0; right: 0; left: 0;">
         <div class="container-fluid">
           <a class="navbar-brand" href="#" style="padding: 0 5px 0 20px;">
@@ -34,23 +35,23 @@
       <Form class="get-in-touch">
         <H1>GET IN TOUCH</H1>
         <div class="mb-3">
-          <label for="formGroupExampleInput" class="form-label">Nama</label>
-          <input type="text" class="form-control" id="formGroupExampleInput">
+          <label for="formGroupExampleName" class="form-label">Nama</label>
+          <input type="text" class="form-control" id="formGroupExampleName">
         </div>
         <div class="mb-3">
-          <label for="formGroupExampleInput" class="form-label">Email</label>
-          <input type="text" class="form-control" id="formGroupExampleInput">
+          <label for="formGroupExampleEmail" class="form-label">Email</label>
+          <input type="text" class="form-control" id="formGroupExampleEmail">
         </div>
         <div class="mb-3">
-          <label for="formGroupExampleInput" class="form-label">Phone Number</label>
-          <input type="text" class="form-control" id="formGroupExampleInput">
+          <label for="formGroupExamplePhoneNumber" class="form-label">Phone Number</label>
+          <input type="text" class="form-control" id="formGroupExamplePhoneNumber">
         </div>
         <label for="formGroupExampleInput" class="form-label">Subject</label>
-          <select class="form-select" aria-label="Default select example">
-            <option selected></option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+          <select class="form-select" aria-label="Default select example" id="option">
+            <option selected value="not defined"></option>
+            <option value="Important">Important</option>
+            <option value="Career">Career</option>
+            <option value="Message">Message</option>
           </select>
           <br>
         <div class="mb-3">
@@ -59,11 +60,10 @@
         </div>
         <div class="submit-box">
           <a class="nav-link" href="form-contact.html">
-            <button type="button" class="btn btn-dark" style="border-radius: 30px; margin-top: 20px; padding: 5px 30px; font-weight: bold;">Submit</button>
+            <button type="button" class="btn btn-dark" onclick="getData(event)" style="border-radius: 30px; margin-top: 20px; padding: 5px 30px; font-weight: bold;">Submit</button>
           </a>
       </div>
       </Form>
     </div>
-    
 </body>
 </html>
