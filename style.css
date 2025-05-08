@@ -143,10 +143,10 @@ form h1{
    margin-top: 10px;
    height: 40px;
 }
-.form-control {
+ .form-control {
    padding-left: 10px;
    padding-right: 80px;
-}
+} 
 .fr{
    background-color: white;
 }

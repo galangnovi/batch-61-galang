@@ -16,22 +16,8 @@ function getData2(event){
     let startDate = new Date(document.getElementById("start").value)
     let endDate = new Date (document.getElementById("end").value)
     let duration = (endDate-startDate)/(1000*60*60*24)
-    let dayDuration= []
-    for ( let i=0; i<duration.length; i++){
-        if(duration[i].value ==="NaN"){
-            dayDuration.push(`Kosong`)
-        } else {
-            dayDuration.push(Math.floor(duration % 30))
-        }
-    }
-    let mountDuration = [] 
-    for ( let i=0; i<duration.length; i++){
-        if(duration[i].value ==="NaN"){
-            mountDuration.push(`Kosong`)
-        } else {
-            mountDuration.push(Math.floor (duration / 30))
-        }
-    }
+    let dayDuration= Math.floor(duration % 30)
+    let mountDuration = Math.floor (duration / 30) 
     let desc = document.getElementById("desc").value
     let check = document.getElementsByName("oh")
     let selected = []
