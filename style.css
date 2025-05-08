@@ -1,7 +1,7 @@
 body {
-   margin-top: 100px;
+   margin-top: 120px;
    font-family: verdana;
-   background-color: rgba(165, 175, 171, 0.534);
+   background-color: rgba(218, 217, 226, 0.882);
    display: grid;
 }
 h1{
@@ -16,8 +16,28 @@ h1{
    flex-wrap: wrap;
 }
 .container-form{
-  display: flex;
-  justify-content: center;
+   display: flex;
+   justify-content: center;
+   font-family: verdana;
+   display: grid;
+   height: auto;
+}
+.container-fr{
+   display: flex;
+   justify-content: center;
+   margin-top:-120px ;
+   background-color: rgba(218, 217, 226, 0.882);
+   padding-bottom: 20px;
+   font-family: verdana;
+   display: grid;
+   height: auto;
+}
+.get-in-form{
+   padding-top: 100px;
+   width: 500px;
+}
+.get-in-form h1{
+   padding-bottom: 30px;
 }
 .main-1{
    width: 500px;
@@ -25,6 +45,15 @@ h1{
 }
 .main-1 h1{
    font-size: 35px;
+}
+.navbar{
+   background-color: #f7f9fb7e !important;
+   position: fixed; 
+   top: 0; 
+   right: 0; 
+   left: 0;
+   box-shadow: 1px 1px 10px rgb(167, 162, 162);
+   z-index: 10000;
 }
 .paragraph{
    text-align: justify;
@@ -101,4 +130,68 @@ form h1{
 }
 .submit-box a .nav-link{
    border-radius: 30px;
+}
+.date-form{
+   display: flex;
+   justify-content: space-between;
+}
+.check-b{
+   display: flex;
+   gap: 50px;
+   padding-bottom: 0;
+   margin-bottom: 0;
+   margin-top: 10px;
+   height: 40px;
+}
+.form-control {
+   padding-left: 10px;
+   padding-right: 80px;
+}
+.fr{
+   background-color: white;
+}
+.container-card{
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   margin-bottom: 10px;
+}
+.container-cad{
+   display: grid;
+   justify-content: center;
+}
+.card-merge{
+   display: flex;
+   gap: 20px;
+}
+.icon-techno{
+   height: 40px;
+}
+.imagProject{
+   height: 200px;
+   object-fit: cover;
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+}
+.submited{
+   padding-top: 20px;
+   margin-bottom: 20px;
+   gap: 10px;
+   display: flex;
+   justify-content: center;
+}
+.submited a{
+   width: 120px;
+}
+.card-body{
+   padding: 0 10px 0 10px;
+}
+.card{
+   margin-bottom: 10px;
+   box-shadow: 1px 1px 10px black;
+   border-radius: 5px;
+   overflow: hidden;
+}
+.card-merge{
+   justify-content: center;
 }
