@@ -16,23 +16,24 @@ function getData2(event){
     let startDate = new Date(document.getElementById("start").value)
     let endDate = new Date (document.getElementById("end").value)
     let duration = (endDate-startDate)/(1000*60*60*24)
-    let dayDuration= Math.floor(duration % 30)
+    let dayDuration= duration % 30
     let mountDuration = Math.floor (duration / 30) 
     let desc = document.getElementById("desc").value
-    let check = document.getElementsByName("oh")
-    let selected = []
-    for ( let i=0; i<check.length; i++){
-        if (check[i].checked)
-        if (check[i].value==="Next JS"){
-            selected.push(`<img src="next.png" alt='Next JS' class="icon-techno">`)
-        }else if (check[i].value==="Node JS"){
-            selected.push(`<img src="node.png" alt='Node JS' class="icon-techno">`)
-        }else if (check[i].value==="React JS"){
-            selected.push(`<img src="react.png" alt='React JS' class="icon-techno">`)
-        }else if (check[i].value==="TypeScript"){
-            selected.push(`<img src="TypeScript.png" alt='Next JS' class="icon-techno">`)
+    //buat gunakan map harus ubah dulu nodelist jadi array,sisanya seperti biasa
+    let check = Array.from (document.getElementsByName("oh"))
+    let selected = check.map(check => {
+    // for ( let i=0; i<check.length; i++){
+        if (check.checked)
+        if (check.value==="Next JS"){
+            return(`<img src="assets/img/next.png" alt='Next JS' class="icon-techno">`)
+        }else if (check.value==="Node JS"){
+            return(`<img src="assets/img/node.png" alt='Node JS' class="icon-techno">`)
+        }else if (check.value==="React JS"){
+            return(`<img src="assets/img/react.png" alt='React JS' class="icon-techno">`)
+        }else if (check.value==="TypeScript"){
+            return(`<img src="assets/img/TypeScript.png" alt='Next JS' class="icon-techno">`)
         }
-    }
+    })
     let imageInput = document.getElementById("image")
     let imageFile = imageInput.files[0]
     let imageURL = imageFile ?
@@ -52,29 +53,30 @@ function getData2(event){
     }
 
     accounts.push(account)
-
     changeElement()
 }
 function changeElement(){
-    document.getElementById("change").innerHTML = ``
-    for ( let i=0 ; i<accounts.length; i++){
-        document.getElementById("change").innerHTML += `
-        <div class="card" style="width: 18rem;">
-            <img src=${accounts[i].imageURL} class="imagProject" alt="...">
+    // document.getElementById("change").innerHTML = ``
+    // for ( let i=0 ; i<accounts.length; i++)
+    document.getElementById("change").innerHTML = accounts.map(accounts=>
+        `<div class="card" style="width: 18rem;">
+            <img src=${accounts.imageURL} class="imagProject" alt="...">
             <div class="card-body">
                 <b>
-                    <h7 class="card-title">${accounts[i].mail}</h7>
+                    <h7 class="card-title">${accounts.mail}</h7>
                 </b>
                 <br>
-                <P> Duration ${accounts[i].dayDuration} Hari ${accounts[i].mountDuration} Bulan </P>
-                <p class="card-text">${accounts[i].desc}</p>
-                <div> ${accounts[i].selected.join(' ')}</div>
+                <P> Duration ${accounts.dayDuration} Hari ${accounts.mountDuration} Bulan </P>
+                <p class="card-text">${accounts.desc}</p>
+                <div> ${accounts.selected.join(" ")}</div>
                 <div class="submited">
                     <a href="#" class="btn btn-dark">edit</a>
                     <a href="#" class="btn btn-dark">delete</a>
                 </div>
             </div>
         </div>
-        `
-    }
+        `).join(" ")
 }
+//join setelah pemanggilan array
+  
+    

@@ -1,197 +1,201 @@
 body {
-   margin-top: 120px;
-   font-family: verdana;
-   background-color: rgba(218, 217, 226, 0.882);
-   display: grid;
-}
+     background-color: rgba(218, 217, 226, 0.882);
+     display: grid;
+     font-family: verdana;
+     margin-top: 120px;
+  }
 h1{
-   font-weight: bold;
-}
+     font-weight: bold;
+  }
 .container{
-   background-color: rgb(255, 255, 255);
-   padding:10px 30px 10px 30px;
-   width: 900px;
-   border-radius: 10px;
-   display: flex;
-   flex-wrap: wrap;
-}
+       background-color: rgb(255, 255, 255);
+       border-radius: 10px;
+       display: flex;
+       flex-wrap: wrap;
+       padding:10px 30px 10px 30px;
+       width: 900px;
+    }
 .container-form{
-   display: flex;
-   justify-content: center;
-   font-family: verdana;
-   display: grid;
-   height: auto;
-}
+       display: flex;
+       display: grid;
+       font-family: verdana;
+       height: auto;
+       justify-content: center;
+    }
 .container-fr{
-   display: flex;
-   justify-content: center;
-   margin-top:-120px ;
-   background-color: rgba(218, 217, 226, 0.882);
-   padding-bottom: 20px;
-   font-family: verdana;
-   display: grid;
-   height: auto;
-}
+     background-color: rgba(218, 217, 226, 0.882);
+     display: flex;
+     display: grid;
+     font-family: verdana;
+     height: auto;
+     justify-content: center;
+     margin-top:-120px ;
+     padding-bottom: 20px;
+  }
 .get-in-form{
-   padding-top: 100px;
-   width: 500px;
-}
+     padding-top: 100px;
+     width: 500px;
+  }
 .get-in-form h1{
-   padding-bottom: 30px;
-}
+     padding-bottom: 30px;
+  }
 .main-1{
-   width: 500px;
-   padding: 50px 30px 10px 15px;
-}
+     padding: 50px 30px 10px 15px;
+     width: 500px;
+  }
 .main-1 h1{
-   font-size: 35px;
-}
+     font-size: 35px;
+  }
 .navbar{
-   background-color: #f7f9fb7e !important;
-   position: fixed; 
-   top: 0; 
-   right: 0; 
-   left: 0;
-   box-shadow: 1px 1px 10px rgb(167, 162, 162);
-   z-index: 10000;
-}
+     background-color: #f7f9fb7e !important;
+     box-shadow: 1px 1px 10px rgb(167, 162, 162);
+     left: 0;
+     position: fixed;
+     right: 0;
+     top: 0;
+     z-index: 10000;
+  }
 .paragraph{
-   text-align: justify;
-}
+     text-align: justify;
+  }
 button {
-   background-color: black;
-   border-radius: 19px;
-   padding: 4px 20px;
-   color: white;
-   font-size: 19px;
-}
+     background-color: black;
+     border-radius: 19px;
+     color: white;
+     font-size: 19px;
+     padding: 4px 20px;
+  }
 .download{
-   display: inline-block;
-   align-items: center;
-   padding-left: 15px;
-}
+     align-items: center;
+     display: inline-block;
+     padding-left: 15px;
+  }
 .download-icon{
-   display: inline-block;
-   width: 25px;
-   height: auto;
-}
+     display: inline-block;
+     height: auto;
+     width: 25px;
+  }
 .social-icon{
-   display: inline-block;
-   width: 50px;
-   text-align: center;
-}
+     display: inline-block;
+     text-align: center;
+     width: 50px;
+  }
 .social{
-   display: flex;
-   justify-content: left;
-   gap: 20px;
-}
+     display: flex;
+     gap: 20px;
+     justify-content: left;
+  }
 .img{
-   display: flex;
-   justify-content: center;
-}
+     display: flex;
+     justify-content: center;
+  }
 .rhoma-irama{
-   border-radius: 5px;
-   height: 350px;
-   margin: 0 0 0 0.83px;
-}
+     border-radius: 5px;
+     height: 350px;
+     margin: 0 0 0 0.83px;
+  }
 .card1{
-   text-align: center;
-   margin: 15px;
-}
+     margin: 15px;
+     text-align: center;
+  }
 .konten{
-   margin-top: 20px;
-   box-shadow: 1px 1px 5px black;
-   border-radius: 5px;
-   height: 450px;
-   width: 313.6px;
-   margin-left: auto;
-   margin-right: auto;
-}
+     border-radius: 5px;
+     box-shadow: 1px 1px 5px black;
+     height: 450px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 20px;
+     width: 313.6px;
+  }
 form h1{
-   text-align: center;
-}
+     text-align: center;
+  }
 .get-in-touch{
-   height: auto;
-   width: 500px;
-   margin-top: -10px;
-}
+     height: auto;
+     margin-top: -10px;
+     width: 500px;
+  }
 .get-in-touch h1{
-   padding-bottom: 20px;
-}
+     padding-bottom: 20px;
+  }
 .form-label{
-   margin-bottom: 0;
-   margin-top: 5px;
-   color: black;
-   font-weight: bold;
-}
+     color: black;
+     font-weight: bold;
+     margin-bottom: 0;
+     margin-top: 5px;
+  }
 .submit-box{
-  display: flex;
-  justify-content: end;
-}
+    display: flex;
+    justify-content: end;
+ }
 .submit-box a .nav-link{
-   border-radius: 30px;
-}
+     border-radius: 30px;
+  }
 .date-form{
-   display: flex;
-   justify-content: space-between;
-}
+     display: flex;
+     justify-content: space-between;
+  }
 .check-b{
-   display: flex;
-   gap: 50px;
-   padding-bottom: 0;
-   margin-bottom: 0;
-   margin-top: 10px;
-   height: 40px;
-}
+     display: flex;
+     gap: 50px;
+     height: 40px;
+     margin-bottom: 0;
+     margin-top: 10px;
+     padding-bottom: 0;
+  }
  .form-control {
-   padding-left: 10px;
-   padding-right: 80px;
-} 
+     padding-left: 10px;
+     padding-right: 80px;
+  } 
 .fr{
-   background-color: white;
-}
+     background-color: white;
+  }
 .container-card{
-   display: flex;
-   justify-content: center;
-   flex-wrap: wrap;
-   margin-bottom: 10px;
-}
+     display: flex;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     margin-bottom: 10px;
+     margin-left: 80px;
+     margin-right: 80px;
+  }
 .container-cad{
-   display: grid;
-   justify-content: center;
-}
+     display: grid;
+     justify-content: center;
+  }
 .card-merge{
-   display: flex;
-   gap: 20px;
-}
+     display: flex;
+     flex-wrap: wrap;
+     gap: 20px;
+  }
 .icon-techno{
-   height: 40px;
-}
+     height: 40px;
+  }
 .imagProject{
-   height: 200px;
-   object-fit: cover;
-   border-top-left-radius: 5px;
-   border-top-right-radius: 5px;
-}
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+     height: 200px;
+     object-fit: cover;
+  }
 .submited{
-   padding-top: 20px;
-   margin-bottom: 20px;
-   gap: 10px;
-   display: flex;
-   justify-content: center;
-}
+     display: flex;
+     gap: 10px;
+     justify-content: center;
+     margin-bottom: 20px;
+     padding-top: 20px;
+  }
 .submited a{
-   width: 120px;
-}
+     width: 120px;
+  }
 .card-body{
-   padding: 0 10px 0 10px;
-}
+     padding: 0 10px 0 10px;
+  }
 .card{
-   margin-bottom: 10px;
-   box-shadow: 1px 1px 10px black;
-   border-radius: 5px;
-   overflow: hidden;
-}
+     border-radius: 5px;
+     box-shadow: 1px 1px 10px black;
+     margin-bottom: 10px;
+     overflow: hidden;
+  }
 .card-merge{
-   justify-content: center;
-}
+     justify-content: center;
+  }
