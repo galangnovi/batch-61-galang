@@ -112,7 +112,6 @@ app.post('/my-project', upload.single("image"), async (req, res) => {
   const durationMs = endDate - startDate;
   const dayDuration = Math.floor(durationMs / (1000 * 60 * 60 * 24));
   const monthDuration = Math.floor(dayDuration / 30);
-  console.log(monthDuration)
 
   // Insert dan ambil kembali id
   const insertResult = await db.query(
@@ -123,7 +122,6 @@ app.post('/my-project', upload.single("image"), async (req, res) => {
   );
   const query = 'select * from latihan.projects';
   const results = await db.query(query);
-  console.log(results.rows)
   res.redirect('/my-project')
 });
 
@@ -148,9 +146,7 @@ app.get('/my-project/:id', async (req, res) => {
     } else if (Array.isArray(project.technologies)) {
       technologies = project.technologies;
     }
-     console.log('Technologies raw:', technologies);
     const techHTML = technologies.map(t => techIcons[t] || '').join(' ');
-    console.log('icon', techHTML);
     return { ...project, techHTML,
       start_date: new Date(project.start_date).toISOString().slice(0, 10),
       end_date: new Date(project.end_date).toISOString().slice(0, 10),
@@ -165,7 +161,6 @@ app.get('/my-project/:id/edit', async (req, res) => {
   const { id } = req.params;
   const result = await db.query('SELECT * FROM latihan.projects WHERE id = $1', [id]);
   const project = result.rows[0];
-  console.log(project)
   project.start_date = project.start_date.toISOString().slice(0, 10);
   project.end_date = project.end_date.toISOString().slice(0, 10);
   res.render('edit-project', { project });
