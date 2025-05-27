@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{{project.email}}'s Project</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <style>
+    .container-project {
+      justify-content: center;
+      display: flex;
+    }
+    .area-desk {
+      width: 70%;
+      display: flex;
+      margin-bottom: 40px;
+      gap: 50px;
+    }
+    .img-desproject {
+      width: 600px;
+      height: 400px;
+      box-shadow: 1px 1px 10px black;
+      margin-top: 20px;
+    }
+    .img-desproject img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .title-desk {
+      justify-content: center;
+      display: flex;
+      margin: 30px 0;
+    }
+    .desk-secondary {
+      margin: 30px 0 0 0;
+    }
+    h2 {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+{{> navbar}}
+{{#each projects}}
+<div class="title-desk">
+  <h1>{{this.email}}'s Project</h1>
+</div>
+
+<div class="container-project">
+  <div class="area-desk">
+    <div class="img-desproject">
+      <img src="{{this.image_url}}" alt="Project Image" />
+    </div>
+    <div class="desk-secondary">
+      <h2>Duration</h2>
+      <p><i class="bi bi-calendar3"></i> {{this.start_date}} - {{this.end_date}}</p>
+      <p><i class="bi bi-clock-history"></i> {{this.month_duration}} bulan</p>
+
+      <h2>Technologies</h2>
+      <div style="grid-auto-flow:column; grid-template-rows:repeat(2,50px); display:grid; width: 300px">
+          {{{techHTML}}}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-project">
+  <div class="area-desk">
+    <p style="text-align: justify; font-size: 17px;">{{this.description}}</p>
+  </div>
+{{/each}}
+</div>
+</body>
+</html>

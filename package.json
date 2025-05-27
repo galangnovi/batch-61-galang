@@ -1,0 +1,27 @@
+{
+  "name": "task-batch-61",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/galangnovi/batch-61-galang.git"
+  },
+  "author": "Galang Anggara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/galangnovi/batch-61-galang/issues"
+  },
+  "homepage": "https://github.com/galangnovi/batch-61-galang#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "hbs": "^4.2.0",
+    "multer": "^2.0.0",
+    "nodemon": "^3.1.10",
+    "pg": "^8.16.0"
+  }
+}

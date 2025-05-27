@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Edit Project</title>
+</head>
+<body class="fr">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script> 
+    {{>navbar}}
+    <div class="container-fr">
+        <form class="get-in-form" id="projectForm" enctype="multipart/form-data" action="/my-project/{{project.id}}/edit" method="POST">
+            <h1>EDIT PROJECT</h1>
+            <br>
+            <div class="mb-3">
+                <label for="formGroupExampleEmail" class="form-label">Email</label>
+                <input type="text" class="form-control" id="email" name="email" value="{{project.email}}">
+            </div>
+            <div class="date-form">
+                <div class="mb-4">
+                    <label for="formGroupExampleEmail" class="form-label">Start Date</label>
+                    <input type="date" name="start" class="form-control 1" id="startDate" value="{{project.start_date}}">
+                </div>
+                <div class="mb-4">
+                    <label for="formGroupExampleEmail" class="form-label">End date</label>
+                    <input type="date" name="end" class="form-control 1" id="endDate" value="{{project.end_date}}">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                <textarea class="form-control" id="desc" rows="3" name="desc">{{project.description}}</textarea>
+            </div>
+            <div class="check-form">
+                <label for="formGroupExampleInput" class="form-label">Technologies</label>
+                <div class="check-b">
+                    <div class="mb-5">
+                        <input type="checkbox" name="techno" id="node" value="Node JS" {{#if (includes project.technologies "Node JS")}}checked{{/if}}>
+                        <label for="node" class="form-label1" >Node JS</label>
+                    </div>
+                    <div class="mb-5">
+                        <input type="checkbox" name="techno" id="next" value="Next JS" {{#if (includes project.technologies "Next JS")}}checked{{/if}}>
+                        <label for="next" class="form-label1">Next JS</label>
+                    </div>
+                </div>
+                <div class="check-b">
+                    <div class="mb-5">
+                        <input type="checkbox" name="techno" id="react" value="React JS" {{#if (includes project.technologies "React JS")}}checked{{/if}}>
+                        <label for="react" class="form-label1">React JS</label>
+                    </div>
+                    <div class="mb-5">
+                        <input type="checkbox" name="techno" id="tysc" value="TypeScript" {{#if (includes project.technologies "TypeScript")}}checked{{/if}}>
+                        <label for="tysc" class="form-label1">TypeScript</label>
+                    </div>
+                </div>   
+            </div>
+            <div class="mb-3">
+                <img src="{{project.image_url}}" alt="" style="width: 300px;">
+                <div class="mb-3">
+                    <label for="formFileMultiple" class="form-label">Change Image</label>
+                    <input class="form-control" type="file" id="image" multiple name="image">
+                </div>   
+            </div>
+            <div class="submit-box">  
+                <button type="submit" class="btn btn-dark" style="border-radius: 30px; margin-top: 20px; padding: 5px 10px; font-weight: bold;">Change Data</button>
+            </div>
+        </form>
+    </div>                 
+</body>
+</html>
