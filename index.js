@@ -69,7 +69,6 @@ app.get('/my-project', async (req, res) => {
     } else if (Array.isArray(project.technologies)) {
       technologies = project.technologies;
     }
-     console.log('Technologies raw:', technologies);
     const techHTML = technologies.map(t => techIcons[t] || '').join(' ');
     console.log('icon', techHTML);
     return { ...project, techHTML };
@@ -99,7 +98,6 @@ const upload = multer({ storage });
 
 //upload
 app.post('/my-project', upload.single("image"), async (req, res) => {
-  console.log('Request POST /my-project diterima');
   const { email, start, end, desc, techno } = req.body;
   const tech = Array.isArray(techno)
     ? techno
@@ -196,7 +194,6 @@ app.post('/my-project/:id/edit', upload.single('image'), async (req, res) => {
     `;
     const values = [email, startDate1, endDate1, desc, tech, imagePath, monthDuration1,id];
     const result = await db.query(query, values);
-    console.log(values)
     res.redirect(`/my-project#projectCard`);
 });
 
